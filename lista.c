@@ -15,7 +15,7 @@ int main ()
     int count=0;
     char **data=NULL;
    
-    /* Open the current directory. */
+    /* Deschide directorul curent. */
 
     d = opendir (dir_name);
 
@@ -47,16 +47,16 @@ int main ()
 }
 
 
-/* Sort the words (actually, sort the pointers). */
+/* Sortare cuvinte (de fapt, sortare de pointeri). */
 
     	qsort(data, i, sizeof(data[0]), comp);
 	//printf ("%s\n", entry->d_name);
 
-/* Display the sorted words. */
+/* Afiseaza cuvintele sortate. */
 
 	for (count = 0; count < i; count++) printf("%s\n", data[count]);
 	
-    /* Close the directory. */
+    /* Inchide folderul. */
     if (closedir (d)) {
         fprintf (stderr, "Nu poate fi inchis '%s': %s\n",
                  dir_name, strerror (errno));
