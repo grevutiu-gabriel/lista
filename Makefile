@@ -15,7 +15,7 @@
 lista: lista.c
 	gcc lista.c -Wall -o lista
 
-clean:
-	rm lista
+#clean:
+#	rm lista
 
 
