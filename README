@@ -1,1 +1,7 @@
-Lista is an aplication to list in a sorted way the content of a current folder.
+Lista is an aplication to list in a sorted way the content of  current folder.
+
+To list filenames from current folder run:
+./lista
+
+Is possible to display only filenames beginning with particular letter:
+./lista a 
