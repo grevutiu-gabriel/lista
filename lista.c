@@ -7,13 +7,14 @@
 
 int comp(const void *s1, const void *s2);
 
-int main ()
+int main (int argc, char *argv[])
 {
     DIR * d;
     char * dir_name = ".";
     int i=0;
     int count=0;
     char **data=NULL;
+    char *first_letter = argv[1];
    
     /* Deschide directorul curent. */
 
@@ -42,8 +43,20 @@ int main ()
             perror("malloc");
             exit(EXIT_FAILURE);
         }
-	strcpy(data[i], entry->d_name); 
-        i++;
+
+	if (argc == 2){
+	
+		if (entry->d_name[0]==*first_letter) {
+			strcpy(data[i], entry->d_name);
+			i++;
+			}
+		}
+	
+	else {
+		strcpy(data[i], entry->d_name);
+	     	i++;
+	     }
+	     
 }
 
 
