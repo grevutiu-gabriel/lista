@@ -38,7 +38,7 @@ int main (int argc, char *argv[])
             perror("realloc");
             exit(EXIT_FAILURE);}
 
-	data[i] = malloc(strlen(entry->d_name));
+	data[i] = malloc(strlen(entry->d_name)*sizeof(char)+1);
 	if (data[i] == NULL) {
             perror("malloc");
             exit(EXIT_FAILURE);
