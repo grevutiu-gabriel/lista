@@ -13,7 +13,7 @@
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 
 lista: lista.c
-	gcc lista.c -Wall -o lista
+	gcc lista.c -Wall -g -o lista
 
 #clean:
 #	rm lista
